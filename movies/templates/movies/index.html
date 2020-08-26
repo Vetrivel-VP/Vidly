@@ -1,0 +1,26 @@
+{% extends "movies/base.html" %}
+{% block content %}
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Release Year</th>
+                <th>General</th>
+                <th>Stock</th>
+                <th>Daily Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movie in movies %}
+                <tr>
+                    <td>{{ movie.title }}</td>
+                    <td>{{ movie.released_year }}</td>
+                    <td>{{ movie.genere }}</td>
+                    <td>{{ movie.numbers_in_stock }}</td>
+                    <td>{{ movie.daily_rate }}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock  %}
